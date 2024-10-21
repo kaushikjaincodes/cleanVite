@@ -1,9 +1,9 @@
 {
   "name": "cleanvite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "cli.js",
   "bin":{
-    "cleanVite" : "./cli.js"
+    "cleanvite" : "./cli.js"
   },
   "scripts": {},
   "keywords": ["vite", "cli", "react"],
