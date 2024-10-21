@@ -15,7 +15,12 @@ You can install `cleanvite` globally using npm:
 npm install -g cleanvite
 ```
 
-### Use
+### Usage
 ```bash
 cleanvite
+```
+### Or
+
+```bash
+npx cleanvite
 ```
