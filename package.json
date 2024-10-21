@@ -1,0 +1,13 @@
+{
+  "name": "cleanvite",
+  "version": "1.0.0",
+  "main": "cli.js",
+  "bin":{
+    "cleanVite" : "./cli.js"
+  },
+  "scripts": {},
+  "keywords": ["vite", "cli", "react"],
+  "author": "Kaushik Jain",
+  "license": "MIT",
+  "description": "Clean Vite's App.jsx, App.css and Index.css files"
+}
