@@ -3,25 +3,21 @@
 const fs = require('fs');
 const path = require('path');
 
+const cssFiles = [
+  path.join(process.cwd(), 'src', 'index.css'),
+  path.join(process.cwd(), 'src', 'App.css')
+];
 
-const indexCssPath = path.resolve('src/index.css');
-const appCssPath = path.resolve('src/App.css');
-const appJsxPath = path.resolve('src/App.jsx');
-
-
-function emptyFile(filePath) {
-  if (fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, ''); 
-    console.log(`Cleared contents of ${filePath}`);
-  } else {
-    console.error(`File not found: ${filePath}`);
-  }
-}
+const appJsxPath = path.join(process.cwd(), 'src', 'App.jsx');
 
 
-function overwriteAppJsx() {
-  const appJsxContent = `
-function App(){
+cssFiles.forEach(file => {
+  fs.writeFileSync(file, '', 'utf8');
+});
+
+
+const appContent = `
+function App() {
   return (
     <>
     </>
@@ -31,14 +27,6 @@ function App(){
 export default App;
 `;
 
-  if (fs.existsSync(appJsxPath)) {
-    fs.writeFileSync(appJsxPath, appJsxContent.trim());  
-    console.log(`Overwritten content of ${appJsxPath}`);
-  } else {
-    console.error(`File not found: ${appJsxPath}`);
-  }
-}
+fs.writeFileSync(appJsxPath, appContent.trim(), 'utf8');
 
-emptyFile(indexCssPath);
-emptyFile(appCssPath);
-overwriteAppJsx();
+console.log('Successfully cleaned the CSS files and reset App.jsx');
