@@ -1,6 +1,6 @@
 {
   "name": "cleanvite",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "main": "cli.js",
   "bin":{
     "cleanvite" : "./cli.js"
